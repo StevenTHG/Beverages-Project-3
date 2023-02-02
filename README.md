@@ -9,7 +9,7 @@ Nicholas Dao \
 Ilkay Ates\
 Patricia Roa
 
-## Project Description:+
+## Project Description:
 With the Fourth of July and the end of this incredible bootcamp just around the corner, now is the perfect time to get a head start on planning the perfect celebration. However, we are now in a peculiar predicament. Everyone knows that the star of any celebration is the right beverage, but what is the right beverage? In this project, we partake in a huge undertaking to determine the right drink, alcoholic or not, for your celebration. 
 
 ## Questions to ask:
