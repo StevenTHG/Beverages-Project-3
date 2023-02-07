@@ -9,7 +9,7 @@ Ilkay Ates\
 Patricia Roa
 
 ## Project Description:
-This project aims to gather historical weather data from OpenWeather API for all 50 US states and analyze the data to draw insights on global warming. The collected data will be used to identify trends and patterns in temperature, precipitation, and other meteorological parameters. The goal is to understand the impact of global warming on the US weather patterns and make informed predictions about future weather patterns.
+This project will utilize the OpenWeather API to gather extensive historical weather data for all 50 states in the US. The collected data will be analyzed to understand the impact of global warming on US weather patterns. The analysis will include trends in temperature, precipitation, humidity, and other key meteorological parameters. The results of this analysis will be used to make informed predictions about future weather patterns and to understand the role of global warming in shaping US weather patterns. The project will provide valuable insights for policymakers, climate scientists, and the general public on the effects of global warming on US weather.
 
 ## Questions to ask:
 1. Does historical weather data confirm or disaffirm global warming?
