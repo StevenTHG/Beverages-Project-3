@@ -26,8 +26,6 @@ for (i = 0; i < cities.length; i++) {
     lon.push(data['coord']['lon'])
     temp.push(data['main']['temp'])
     descr.push(data['weather'][0]['description'])
-
-// Create current weather dictionary
 })};
 weatherDict = {
   "city": cities,
