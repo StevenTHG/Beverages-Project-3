@@ -72,7 +72,8 @@ for (var i = 0; i < statesCocktails.length; i++) {
   L.marker(location)
     .bindPopup(`<h1>${state.name}</h1> <hr> <h3>Most Popular Cocktail: ${state.cocktail}</h3>`)
     .addTo(myMap);
-}
+};
+
 
 
 
