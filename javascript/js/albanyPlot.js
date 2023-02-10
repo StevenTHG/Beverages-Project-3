@@ -39,7 +39,7 @@ let albanyDailyMinTemp = [
 
 // Display the default plot
 function init() {
-  let trace1 = {
+  let albanyTrace1 = {
     x: albanyYear,
     y: albanyDailyAvgTemp,
     type: "line",
@@ -55,24 +55,24 @@ function init() {
     }
   };
   
-  let data = [trace1];
+  let data = [albanyTrace1];
   
   Plotly.newPlot("albanyLine", data, layout);
 };
 
-let trace1 = {
+let albanyTrace1 = {
   x: albanyYear,
   y: albanyDailyAvgTemp,
   type: "line",
   name: 'Average Daily Average Temp'
 };
-let trace2 = {
+let albanyTrace2 = {
   x: albanyYear,
   y: albanyDailyMaxTemp,
   type: "line",
   name: 'Average Daily Max Temp'
 };
-let trace3 = {
+let albanyTrace3 = {
   x: albanyYear,
   y: albanyDailyMinTemp,
   type: "line",
@@ -81,11 +81,11 @@ let trace3 = {
 
 
 // On change to the DOM, call getData()
-d3.selectAll("#selDataset").on("change", getData);
+d3.selectAll("#selAlbanyDataset").on("change", getData);
 
 // Function called by DOM changes
 function getData() {
-  let dropdownMenu = d3.select("#selDataset");
+  let dropdownMenu = d3.select("#selAlbanyDataset");
   // Assign the value of the dropdown menu option to a letiable
   let dataset = dropdownMenu.property("value");
   let layout = {
@@ -98,16 +98,16 @@ function getData() {
     }
   };
   if (dataset == 'avgDailyMaxTemp') {
-      data = [trace2];
+      data = [albanyTrace2];
   }
   else if (dataset == 'avgDailyMinTemp') {
-      data = [trace3];
+      data = [albanyTrace3];
   }
   else if (dataset == 'avgDailyAvgTemp') {
-    data = [trace1];
+    data = [albanyTrace1];
   }
   else if (dataset == 'allAvg') {
-    data = [trace1,trace2,trace3];
+    data = [albanyTrace1,albanyTrace2,albanyTrace3];
   }
 // Call function to update the chart
   Plotly.newPlot("albanyLine", data, layout);
