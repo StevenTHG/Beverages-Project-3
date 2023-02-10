@@ -1,4 +1,4 @@
-Year,Location,Average Daily Average Temp,Average Daily Max Temp,Average Daily Min Temp
+Year,Location,Average_Daily_Average_Temp,Average_Daily_Max_Temp,Average_Daily_Min_Temp
 2013,"Albany, New York",53.43464052287582,63.04248366013072,43.26470588235294
 2014,"Albany, New York",48.37534246575343,57.66027397260274,38.586301369863016
 2015,"Albany, New York",49.967123287671235,59.93698630136986,39.52054794520548

@@ -1,4 +1,4 @@
-Year,Location,Average Daily Average Temp,Average Daily Max Temp,Average Daily Min Temp
+Year,Location,Average_Daily_Average_Temp,Average_Daily_Max_Temp,Average_Daily_Min_Temp
 2013,"Topeka, Kansas",58.96078431372549,69.99673202614379,47.450980392156865
 2014,"Topeka, Kansas",55.032876712328765,66.18082191780822,43.45479452054794
 2015,"Topeka, Kansas",56.96986301369863,67.97534246575343,45.45479452054794

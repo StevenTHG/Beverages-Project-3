@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Beverages Project 3</title>
+    <title>Weather Project 3</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -40,14 +40,11 @@
     <br />
 
     <select id="selDataset">
-        <option value="australia">Australia</option>
-        <option value="brazil">Brazil</option>
-        <option value="uk">United Kingdom</option>
-        <option value="mexico">Mexico</option>
-        <option value="singapore">Singapore</option>
-        <option value="southAfrica">South Africa</option>
+        <option value="avgDailyAvgTemp">Average Daily Average Temp</option>
+        <option value="avgDailyMaxTemp">Average Daily Max Temp</option>
+        <option value="avgDailyMinTemp">Average Daily Min Temp</option>
     </select>
-    <div id="pie"></div>
+    <div id="line"></div>
 
     <p>Data Sources:<br />
         <ul>
@@ -70,6 +67,7 @@
     </p>
     <script src="js/data.js"></script>
     <script src="js/plots.js"></script>
+    <script src="js/plotting.js"></script>
 
     <!-- Our JavaScript file -->
     <script type="text/javascript" src="js/logic.js"></script>

@@ -1,43 +1,38 @@
-let data = {
-    australia: {
-        "Domestic Health": 84241,
-        "Education": 68160,
-        "Final Consumption": 247409,
-        "Research and Development": 24918
-    },
-
-    brazil: {
-        "Domestic Health": 81832,
-        "Education": 130424,
-        "Final Consumption": 416043,
-        "Research and Development": 22573
-    },
-
-    uk: {
-        "Domestic Health": 207917,
-        "Education": 144950,
-        "Final Consumption": 498433,
-        "Research and Development": 44736
-    },
-
-    mexico: {
-        "Domestic Health": 32947,
-        "Education": 52362,
-        "Final Consumption": 134626,
-        "Research and Development": 3806
-    },
-
-    singapore: {
-        "Domestic Health": 7312,
-        "Education": 9504,
-        "Final Consumption": 34940,
-        "Research and Development": 6608
-    },
-
-    southAfrica: {
-        "Domestic Health": 15215,
-        "Education": 21368,
-        "Final Consumption": 72704,
-        "Research and Development": 2909
-    }
+let albany = {
+    averageDailyAverageTemp: {
+        "2013":53.4346405229,
+        "2014":48.3753424658,
+        "2015":49.9671232877,
+        "2016":51.3852459016,
+        "2017":50.5232876712,
+        "2018":50.5287671233,
+        "2019":49.8767123288,
+        "2020":50.8961748634,
+        "2021":49.2904109589,
+        "2022":50.9479452055
+        },
+    averageDailyMaxTemp:{
+        "2013":63.0424836601,
+        "2014":57.6602739726,
+        "2015":59.9369863014,
+        "2016":61.1666666667,
+        "2017":59.6356164384,
+        "2018":59.0931506849,
+        "2019":59.0630136986,
+        "2020":60.3360655738,
+        "2021":58.1643835616,
+        "2022":60.9150684932
+        },
+    averageDailyMinTemp:{
+        "2013":43.2647058824,
+        "2014":38.5863013699,
+        "2015":39.5205479452,
+        "2016":41.0928961749,
+        "2017":40.8876712329,
+        "2018":41.4575342466,
+        "2019":40.2054794521,
+        "2020":40.9726775956,
+        "2021":39.904109589,
+        "2022":40.4904109589
+        }
 };
