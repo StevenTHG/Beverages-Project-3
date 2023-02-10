@@ -39,7 +39,7 @@ let topekaDailyMinTemp = [
 
 // Display the default plot
 function init() {
-  let trace1 = {
+  let topekaTrace1 = {
     x: topekaYear,
     y: topekaDailyAvgTemp,
     type: "line",
@@ -55,24 +55,24 @@ function init() {
     }
   };
   
-  let data = [trace1];
+  let data = [topekaTrace1];
   
   Plotly.newPlot("topekaLine", data, layout);
 };
 
-let trace1 = {
+let topekaTrace1 = {
   x: topekaYear,
   y: topekaDailyAvgTemp,
   type: "line",
   name: 'Average Daily Average Temp'
 };
-let trace2 = {
+let topekaTrace2 = {
   x: topekaYear,
-  y: topkekaDailyMaxTemp,
+  y: topekaDailyMaxTemp,
   type: "line",
   name: 'Average Daily Max Temp'
 };
-let trace3 = {
+let topekaTrace3 = {
   x: topekaYear,
   y: topekaDailyMinTemp,
   type: "line",
@@ -98,16 +98,16 @@ function getData() {
     }
   };
   if (dataset == 'avgDailyMaxTemp') {
-      data = [trace2];
+      data = [topekaTrace2];
   }
   else if (dataset == 'avgDailyMinTemp') {
-      data = [trace3];
+      data = [topekaTrace3];
   }
   else if (dataset == 'avgDailyAvgTemp') {
-    data = [trace1];
+    data = [topekaTrace1];
   }
   else if (dataset == 'allAvg') {
-    data = [trace1,trace2,trace3];
+    data = [topekaTrace1,topekaTrace2,topekaTrace3];
   }
 // Call function to update the chart
   Plotly.newPlot("topekaLine", data, layout);
