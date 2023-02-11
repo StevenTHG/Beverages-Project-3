@@ -17,6 +17,12 @@ country = 'US'
 // Build partial query URL
 queryUrl = `${url}appid=${apiKey}&units=${units}&`
 
+
+// US Capitol Cities:'Montgomery', 'Juneau', 'Phoenix', 'Little Rock', 'Sacramento', 'Denver', 'Hartford', 'Dover', 'Honolulu', 'Tallahassee', 'Atlanta',
+//             'Boise', 'Springfield', 'Indianapolis', 'Des Moines', 'Topeka', 'Frankfort', 'Baton Rouge', 'Augusta', 'Annapolis', 'Boston', 
+//             'Lansing', 'St. Paul', 'Jackson', 'Jefferson City', 'Helena', 'Lincoln', 'Carson City', 'Concord', 'Trenton', 'Santa Fe', 'Raleigh', 
+//             'Bismarck', 'Albany', 'Columbus', 'Oklahoma City', 'Salem', 'Harrisburg', 'Providence', 'Columbia', 'Pierre', 'Nashville', 'Austin', 
+//             'Salt Lake City', 'Montpelier', 'Richmond', 'Olympia', 'Charleston', 'Madison', 'Cheyenne']
 // Get latitude and temperature for cities
 
 const cities = [[32.377716,-86.300568],[58.301598,-134.420212],[33.448143,-112.096962],[34.746613,-92.288986],[38.576668,-121.493629],[39.739227,-104.984856]
@@ -28,11 +34,7 @@ const cities = [[32.377716,-86.300568],[58.301598,-134.420212],[33.448143,-112.0
 ,[41.830914,-71.414963],[34.000343,-81.033211],[44.367031,-100.346405],[36.16581,-86.784241],[30.27467,-97.740349],[40.777477,-111.888237],[44.262436,-72.580536]
 ,[37.538857,-77.43364],[47.035805,-122.905014],[38.336246,-81.612328],[43.074684,-89.384445],[41.140259,-104.820236]]
 
-// cities = ['Montgomery', 'Juneau', 'Phoenix', 'Little Rock', 'Sacramento', 'Denver', 'Hartford', 'Dover', 'Honolulu', 'Tallahassee', 'Atlanta',
-//             'Boise', 'Springfield', 'Indianapolis', 'Des Moines', 'Topeka', 'Frankfort', 'Baton Rouge', 'Augusta', 'Annapolis', 'Boston', 
-//             'Lansing', 'St. Paul', 'Jackson', 'Jefferson City', 'Helena', 'Lincoln', 'Carson City', 'Concord', 'Trenton', 'Santa Fe', 'Raleigh', 
-//             'Bismarck', 'Albany', 'Columbus', 'Oklahoma City', 'Salem', 'Harrisburg', 'Providence', 'Columbia', 'Pierre', 'Nashville', 'Austin', 
-//             'Salt Lake City', 'Montpelier', 'Richmond', 'Olympia', 'Charleston', 'Madison', 'Cheyenne']
+
 
 // set up lists to hold response info
 lat = []
