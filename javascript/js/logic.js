@@ -12,6 +12,7 @@ cities = ['Montgomery', 'Juneau', 'Phoenix', 'Little Rock',	'Sacramento', 'Denve
 // Save config information.
 url = "http://api.openweathermap.org/data/2.5/weather?"
 units = "imperial"
+country = 'US'
 
 // Build partial query URL
 queryUrl = `${url}appid=${apiKey}&units=${units}&q=`
@@ -44,8 +45,12 @@ weatherData = []
 
 // Loop through the list of cities and perform a request for data on each
 for (i = 0; i < cities.length; i++) {
+<<<<<<< HEAD
   d3.json(queryUrl + cities[i]).then(function (data) {
 >>>>>>> aa823775ca53c6b34db9b73119565dc28784841b
+=======
+  d3.json(queryUrl + cities[i] + ',' + country).then(function (data) {
+>>>>>>> 87ddc5f4c6eb27b3c30ded0ca359b8779a2a4682
     lat.push(data['coord']['lat'])
     lon.push(data['coord']['lon'])
     temp.push(data['main']['temp'])
@@ -84,8 +89,12 @@ console.log(weatherDict);
       };
     };
   });
+<<<<<<< HEAD
 }
 >>>>>>> aa823775ca53c6b34db9b73119565dc28784841b
 
 
 
+=======
+}
+>>>>>>> 87ddc5f4c6eb27b3c30ded0ca359b8779a2a4682
