@@ -12,6 +12,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Save config information.
 url = "http://api.openweathermap.org/data/2.5/weather?"
 units = "imperial"
+country = 'US'
 
 // Build partial query URL
 queryUrl = `${url}appid=${apiKey}&units=${units}&q=`
@@ -32,7 +33,7 @@ weatherData = []
 
 // Loop through the list of cities and perform a request for data on each
 for (i = 0; i < cities.length; i++) {
-  d3.json(queryUrl + cities[i]).then(function (data) {
+  d3.json(queryUrl + cities[i] + ',' + country).then(function (data) {
     lat.push(data['coord']['lat'])
     lon.push(data['coord']['lon'])
     temp.push(data['main']['temp'])
@@ -60,6 +61,3 @@ for (i = 0; i < cities.length; i++) {
     };
   });
 }
-
-
-
