@@ -5,6 +5,7 @@ let url = "http://api.openweathermap.org/data/2.5/weather?";
 let units = "imperial";
 let country = 'US';
 let layerMarkers = [];
+
 // Build partial query URL
 queryUrl = `${url}appid=${apiKey}&units=${units}&`
 
@@ -57,10 +58,20 @@ for (i = 0; i < cities.length; i++) {
         // let layerMarkers = [];
         let cityWeather = weatherData[x];
         let location = [];
+        var icons = {
+            City_Capitols: L.ExtraMarkers.icon({
+            icon: "ion-thermometer",
+            iconColor: "white",
+            markerColor: "blue-dark",
+            shape: "circle"
+          })
+        };
+
+        let capCode = 'City_Capitols';
         location.push(cityWeather.lat);
         location.push(cityWeather.lon);
         console.log(cityWeather);
-        var capitol = L.marker(location, riseOnHover= true)
+        var capitol = L.marker(location, {icon: icons[capCode]})
           .bindPopup(`<h1>${cityWeather.city}</h1> <hr> <h3>Current Temperature: ${cityWeather.temp}</h3> <hr> <h3>Current Weather: ${cityWeather.descr}</h3>`).addTo(myMap);
         layerMarkers.push(capitol);
         // console.log(layerMarkers);
