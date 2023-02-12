@@ -1,6 +1,3 @@
-#pip install Flask psycopg2-binary
-#pip install pipenv
-
 import numpy as np
 
 import sqlalchemy
@@ -14,7 +11,7 @@ from flask import Flask, jsonify
 #################################################
 # Database Setup
 #################################################
-engine = create_engine("sqlite:///titanic.sqlite")
+engine = create_engine("sqlite:///weatherlite.db")
 
 # reflect an existing database into a new model
 Base = automap_base()
