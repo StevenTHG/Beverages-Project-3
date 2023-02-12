@@ -42,7 +42,7 @@ for (i = 0; i < cities.length; i++) {
     lon.push(data['coord']['lon'])
     temp.push(data['main']['temp'])
     descr.push(data['weather'][0]['description'])
-    console.log(data);
+    // console.log(data);
     weatherData.push({
       city: data['name'],
       lat: data['coord']['lat'],
@@ -70,13 +70,13 @@ for (i = 0; i < cities.length; i++) {
         let capCode = 'City_Capitols';
         location.push(cityWeather.lat);
         location.push(cityWeather.lon);
-        console.log(cityWeather);
+        // console.log(cityWeather);
         var capitol = L.marker(location, {icon: icons[capCode]})
-          .bindPopup(`<h1>${cityWeather.city}</h1> <hr> <h3>Current Temperature: ${cityWeather.temp}</h3> <hr> <h3>Current Weather: ${cityWeather.descr}</h3>`).addTo(myMap);
+          .bindPopup(`<h1>${cityWeather.city}</h1> <hr> <h3>Current Temperature: ${cityWeather.temp} (\u00B0F)</h3> <hr> <h3>Current Weather: ${cityWeather.descr}</h3>`).addTo(myMap);
         layerMarkers.push(capitol);
         // console.log(layerMarkers);
       };
-      console.log(layerMarkers); 
+      // console.log(layerMarkers); 
      // Create a map object.
    
     };
