@@ -7,18 +7,23 @@ var myMap = L.map("map-id", {
 // Add a tile layer.
 var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-});
+}).addTo(myMap);
 
 var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 });
 
 var baseMaps = {
-  Street: street,
-  Topography: topo
+  Street: street
 };
 
-L.control.layers(baseMaps).addTo(myMap);
+var overlayMaps = {
+  Topography: topo
+}
+
+L.control.layers(baseMaps, overlayMaps, {
+  collapsed: false
+}).addTo(myMap);
 
 // Save config information.
 url = "http://api.openweathermap.org/data/2.5/weather?"
