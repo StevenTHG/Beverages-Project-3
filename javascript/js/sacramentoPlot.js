@@ -43,10 +43,13 @@ function init() {
     x: sacramentoYear,
     y: sacramentoDailyAvgTemp,
     type: "line",
+    line: {color: 'green', width: 4}
   };
   
   let layout = {
-    title: 'Sacramento, California Average Yearly Temperature (\u00B0F)',
+    title: '<b>Sacramento, California Average Yearly Temperature (\u00B0F)</b>',
+    plot_bgcolor: '#e0e0eb',
+    paper_bgcolor: '#ffff99',
     xaxis: {
       title: 'Year'
     },
@@ -64,18 +67,21 @@ let sacTrace1 = {
   x: sacramentoYear,
   y: sacramentoDailyAvgTemp,
   type: "line",
+  line: {color: 'green', width: 4},
   name: 'Average Daily Average Temp'
 };
 let sacTrace2 = {
   x: sacramentoYear,
   y: sacramentoDailyMaxTemp,
   type: "line",
+  line: {color: 'firebrick', width: 4},
   name: 'Average Daily Max Temp'
 };
 let sacTrace3 = {
   x: sacramentoYear,
   y: sacramentoDailyMinTemp,
   type: "line",
+  line: {color: 'darkblue', width: 4},
   name: 'Average Daily Min Temp'
 };
 
@@ -89,7 +95,9 @@ function getData() {
   // Assign the value of the dropdown menu option to a letiable
   let dataset = dropdownMenu.property("value");
   let layout = {
-    title: 'Sacramento, California Average Yearly Temperature (\u00B0F)',
+    title: '<b>Sacramento, California Average Yearly Temperature (\u00B0F)</b>',
+    plot_bgcolor: '#e0e0eb',
+    paper_bgcolor: '#ffff99',
     xaxis: {
       title: 'Year'
     },
