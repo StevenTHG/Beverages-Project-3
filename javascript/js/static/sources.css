@@ -1,0 +1,21 @@
+
+.title{
+    background-image: url("static/temperature-background.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    color: #fff;
+    font-size: 35px;
+    font-family: Baskerville;
+    position: center;
+    font-weight: bold;
+    height: auto
+    }
+
+    .links{
+        display: block;
+        text-align: center;
+        color: #fff;
+        font-size: 35px;
+        font-family: Arial;
+    }
