@@ -2,6 +2,7 @@
   width: 100%;
   background-image: url("./weather-wind.gif");
   background-size:cover;
+  color: #fff;
 }
 
 .title{
