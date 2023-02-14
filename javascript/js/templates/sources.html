@@ -10,20 +10,37 @@
     <!--Sources CSS-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sources.css') }}">
 </head>
-<div class="title">
-    <h1>Sources</h1>
-    <div class = "links"></div>
-    <a href="https://www.ncei.noaa.gov/data/local-climatological-data/doc/LCD_documentation.pdf">NOAA Climate Data</a>
-    <a href="https://www.ncei.noaa.gov/cdo-web/">LCD Documentation from NOAA</a>
-    <a href="https://anijs.github.io/">AniJS</a>
-    <a href="https://leafletjs.com/">Leaflet</a>
-    <a href="https://d3js.org/">D3</a>
-    <a href="https://wallpapers.com/wallpapers/burning-temperature-of-the-sun-b14hsxx2jppt7gua.html">Home Page and Source Page Background</a>
-    <a href="https://tenor.com/view/weather-wind-weather-forecast-gif-17384272">Charts Page Header</a>
-</div>
-<div class="navbar"></div>
-<div class="menu"></div>
+
 <body>
-<script src="../anijs-min.js"></script>
+    <div class="main">
+        <div class="navbar">
+            <div class="menu">
+                <ul data-anijs="if: mouseover, do: bounce animated">
+                    <li> <a href="home">HOME</a></li>
+                    <li> <a href="map">MAP</a></li>
+                    <li> <a href="charts">CHARTS</a></li>
+                    <li> <a href="sources">SOURCES</a></li>
+                </ul>
+            
+        
+    
+            <div class="title">
+                <h1>Sources</h1>
+            
+        
+            <div class = "links"></div>
+                <li><a href="https://www.ncei.noaa.gov/data/local-climatological-data/doc/LCD_documentation.pdf">NOAA Climate Data</a></li>
+                <li><a href="https://www.ncei.noaa.gov/cdo-web/">LCD Documentation from NOAA</a></li>
+                <li><a href="https://anijs.github.io/">AniJS</a></li>
+                <li><a href="https://leafletjs.com/">Leaflet</a></li>
+                <li><a href="https://d3js.org/">D3</a></li>
+                <li><a href="https://wallpapers.com/wallpapers/burning-temperature-of-the-sun-b14hsxx2jppt7gua.html">Home Page and Source Page Background</a></li>
+                <li><a href="https://tenor.com/view/weather-wind-weather-forecast-gif-17384272">Charts Page Header</a></li>
+            </div>
+        </div>
+    </div>
+
+
+<script src="{{url_for('static', filename='anijs-min.js')}}"></script>
 </body>
 </html>
