@@ -43,10 +43,13 @@ let honoluluTrace1 = {
 x: honoluluYear,
 y: honoluluDailyAvgTemp,
 type: "line",
+line: {color: 'green', width: 4}
 };
 
 let layout = {
 title: 'Honolulu, Hawaii Average Yearly Temperature (\u00B0F)',
+plot_bgcolor: '#e0e0eb',
+paper_bgcolor: '#ffff99',
 xaxis: {
 title: 'Year'
 },
@@ -64,18 +67,21 @@ let honoluluTrace1 = {
 x: honoluluYear,
 y: honoluluDailyAvgTemp,
 type: "line",
+line: {color: 'green', width: 4},
 name: 'Average Daily Average Temp'
 };
 let honoluluTrace2 = {
 x: honoluluYear,
 y: honoluluDailyMaxTemp,
 type: "line",
+line: {color: 'firebrick', width: 4},
 name: 'Average Daily Max Temp'
 };
 let honoluluTrace3 = {
 x: honoluluYear,
 y: honoluluDailyMinTemp,
 type: "line",
+line: {color: 'darkblue', width: 4},
 name: 'Average Daily Min Temp'
 };
 
@@ -90,6 +96,8 @@ let dropdownMenu = d3.select("#selHonoluluDataset");
 let dataset = dropdownMenu.property("value");
 let layout = {
 title: 'Honolulu, Hawaii Average Yearly Temperature (\u00B0F)',
+plot_bgcolor: '#e0e0eb',
+paper_bgcolor: '#ffff99',
 xaxis: {
 title: 'Year'
 },

@@ -43,10 +43,13 @@ let juneauTrace1 = {
 x: juneauYear,
 y: juneauDailyAvgTemp,
 type: "line",
+line: {color: 'green', width: 4}
 };
 
 let layout = {
 title: 'Juneau, Alaska Average Yearly Temperature (\u00B0F)',
+plot_bgcolor: '#e0e0eb',
+paper_bgcolor: '#ffff99',
 xaxis: {
 title: 'Year'
 },
@@ -64,18 +67,21 @@ let juneauTrace1 = {
 x: juneauYear,
 y: juneauDailyAvgTemp,
 type: "line",
+line: {color: 'green', width: 4},
 name: 'Average Daily Average Temp'
 };
 let juneauTrace2 = {
 x: juneauYear,
 y: juneauDailyMaxTemp,
 type: "line",
+line: {color: 'firebrick', width: 4},
 name: 'Average Daily Max Temp'
 };
 let juneauTrace3 = {
 x: juneauYear,
 y: juneauDailyMinTemp,
 type: "line",
+line: {color: 'darkblue', width: 4},
 name: 'Average Daily Min Temp'
 };
 
@@ -90,6 +96,8 @@ let dropdownMenu = d3.select("#selJuneauDataset");
 let dataset = dropdownMenu.property("value");
 let layout = {
 title: 'Juneau, Alaska Average Yearly Temperature (\u00B0F)',
+plot_bgcolor: '#e0e0eb',
+paper_bgcolor: '#ffff99',
 xaxis: {
 title: 'Year'
 },

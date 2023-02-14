@@ -43,10 +43,13 @@ function init() {
     x: topekaYear,
     y: topekaDailyAvgTemp,
     type: "line",
+    line: {color: 'green', width: 4}
   };
   
   let layout = {
     title: 'Topeka, Kansas Average Yearly Temperature (\u00B0F)',
+    plot_bgcolor: '#e0e0eb',
+    paper_bgcolor: '#ffff99',
     xaxis: {
       title: 'Year'
     },
@@ -64,18 +67,21 @@ let topekaTrace1 = {
   x: topekaYear,
   y: topekaDailyAvgTemp,
   type: "line",
+  line: {color: 'green', width: 4},
   name: 'Average Daily Average Temp'
 };
 let topekaTrace2 = {
   x: topekaYear,
   y: topekaDailyMaxTemp,
   type: "line",
+  line: {color: 'firebrick', width: 4},
   name: 'Average Daily Max Temp'
 };
 let topekaTrace3 = {
   x: topekaYear,
   y: topekaDailyMinTemp,
   type: "line",
+  line: {color: 'darkblue', width: 4},
   name: 'Average Daily Min Temp'
 };
 
@@ -90,6 +96,8 @@ function getData() {
   let dataset = dropdownMenu.property("value");
   let layout = {
     title: 'Topeka, Kansas Average Yearly Temperature (\u00B0F)',
+    plot_bgcolor: '#e0e0eb',
+    paper_bgcolor: '#ffff99',
     xaxis: {
       title: 'Year'
     },

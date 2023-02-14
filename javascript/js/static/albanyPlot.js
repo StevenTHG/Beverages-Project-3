@@ -43,10 +43,13 @@ function init() {
     x: albanyYear,
     y: albanyDailyAvgTemp,
     type: "line",
+    line: {color: 'green', width: 4}
   };
   
   let layout = {
     title: 'Albany, New York Average Yearly Temperature (\u00B0F)',
+    plot_bgcolor: '#e0e0eb',
+    paper_bgcolor: '#ffff99',
     xaxis: {
       title: 'Year'
     },
@@ -64,18 +67,21 @@ let albanyTrace1 = {
   x: albanyYear,
   y: albanyDailyAvgTemp,
   type: "line",
+  line: {color: 'green', width: 4},
   name: 'Average Daily Average Temp'
 };
 let albanyTrace2 = {
   x: albanyYear,
   y: albanyDailyMaxTemp,
   type: "line",
+  line: {color: 'firebrick', width: 4},
   name: 'Average Daily Max Temp'
 };
 let albanyTrace3 = {
   x: albanyYear,
   y: albanyDailyMinTemp,
   type: "line",
+  line: {color: 'darkblue', width: 4},
   name: 'Average Daily Min Temp'
 };
 
@@ -90,6 +96,8 @@ function getData() {
   let dataset = dropdownMenu.property("value");
   let layout = {
     title: 'Albany, New York Average Yearly Temperature (\u00B0F)',
+    plot_bgcolor: '#e0e0eb',
+    paper_bgcolor: '#ffff99',
     xaxis: {
       title: 'Year'
     },
