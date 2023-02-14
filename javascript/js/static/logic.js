@@ -1,34 +1,10 @@
-// Create a map object.
-var myMap = L.map("map-id", {
-  center: [39.00, -95.71],
-  zoom: 4
-});
 
-// Add a tile layer.
-var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(myMap);
-
-var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-});
-
-var baseMaps = {
-  Street: street
-};
-
-var overlayMaps = {
-  Topography: topo
-}
-
-L.control.layers(baseMaps, overlayMaps, {
-  collapsed: false
-}).addTo(myMap);
 
 // Save config information.
-url = "http://api.openweathermap.org/data/2.5/weather?"
-units = "imperial"
-country = 'US'
+let url = "http://api.openweathermap.org/data/2.5/weather?";
+let units = "imperial";
+let country = 'US';
+let layerMarkers = [];
 
 // Build partial query URL
 queryUrl = `${url}appid=${apiKey}&units=${units}&`
@@ -66,7 +42,7 @@ for (i = 0; i < cities.length; i++) {
     lon.push(data['coord']['lon'])
     temp.push(data['main']['temp'])
     descr.push(data['weather'][0]['description'])
-    // console.log(data);
+    console.log(data);
     weatherData.push({
       city: data['name'],
       lat: data['coord']['lat'],
@@ -79,14 +55,67 @@ for (i = 0; i < cities.length; i++) {
     // console.log the weatherData after all requests have been processed
     if (weatherData.length == cities.length) {
       for (let x = 0; x < weatherData.length; x++) {
+        // let layerMarkers = [];
         let cityWeather = weatherData[x];
         let location = [];
+        // Create the icon markers with thermometer
+        var icons = {
+            City_Capitols: L.ExtraMarkers.icon({
+            icon: "ion-thermometer",
+            iconColor: "white",
+            markerColor: "blue-dark",
+            shape: "circle"
+          })
+        };
+
+        let capCode = 'City_Capitols';
         location.push(cityWeather.lat);
         location.push(cityWeather.lon);
-        // console.log(cityWeather);
-        L.marker(location, riseOnHover= true)
-          .bindPopup(`<h1>${cityWeather.city}</h1> <hr> <h3>Current Temperature: ${cityWeather.temp}</h3> <hr> <h3>Current Weather: ${cityWeather.descr}</h3>`).addTo(myMap);
+        console.log(cityWeather);
+        var capitol = L.marker(location, {icon: icons[capCode]})
+          .bindPopup(`<h2>${cityWeather.city}</h2> <hr> <h3>Current Temperature: ${cityWeather.temp}</h3> <hr> <h3>Current Weather: ${cityWeather.descr}</h3>`).addTo(myMap);
+        layerMarkers.push(capitol);
+        // console.log(layerMarkers);
       };
+      console.log(layerMarkers); 
+     // Create a map object.
+   
     };
+
   });
+
 }
+// Add all the cityMarkers to a new layer group.
+// Now, we can handle them as one group instead of referencing each one individually.
+var cityLayer = L.layerGroup(layerMarkers);
+
+// Define variables for our tile layers.
+var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+})
+
+var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+	attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+});
+
+// Only one base layer can be shown at a time.
+var baseMaps = {
+  Street: street,
+  Topography: topo
+};
+
+// Overlays that can be toggled on or off
+var overlayMaps = {
+  Cities: cityLayer
+};
+
+// Create a map object, and set the default layers.
+var myMap = L.map("map-id", {
+  center: [39.00, -95.71],
+  zoom: 4,
+  layers: [street, cityLayer]
+});
+
+// Pass our map layers into our layer control.
+// Add the layer control to the map.
+L.control.layers(baseMaps).addTo(myMap);
