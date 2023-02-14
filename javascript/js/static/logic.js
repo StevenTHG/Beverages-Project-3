@@ -1,5 +1,3 @@
-
-
 // Save config information.
 let url = "http://api.openweathermap.org/data/2.5/weather?";
 let units = "imperial";
@@ -7,7 +5,7 @@ let country = 'US';
 let layerMarkers = [];
 
 // Build partial query URL
-queryUrl = `${url}appid=${apiKey}&units=${units}&`
+queryUrl = `${url}appid=${apiKey}&units=${units}&`;
 
 
 // US Capitol Cities:'Montgomery', 'Juneau', 'Phoenix', 'Little Rock', 'Sacramento', 'Denver', 'Hartford', 'Dover', 'Honolulu', 'Tallahassee', 'Atlanta',
@@ -73,7 +71,7 @@ for (i = 0; i < cities.length; i++) {
         location.push(cityWeather.lon);
         console.log(cityWeather);
         var capitol = L.marker(location, {icon: icons[capCode]})
-          .bindPopup(`<h2>${cityWeather.city}</h2> <hr> <h3>Current Temperature: ${cityWeather.temp}</h3> <hr> <h3>Current Weather: ${cityWeather.descr}</h3>`).addTo(myMap);
+          .bindPopup(`<h2>${cityWeather.city}</h2> <hr> <h3>Current Temperature: ${cityWeather.temp} (\u00B0F)</h3> <hr> <h3>Current Weather: ${cityWeather.descr}</h3>`).addTo(myMap);
         layerMarkers.push(capitol);
         // console.log(layerMarkers);
       };

@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Project 3 Sources</title>
-    <!-- AniCollection.css library -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='anicollection.css') }}">
     <!--Sources CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sources.css') }}">
+    <link rel="stylesheet" type="text/css" href="../static/sources.css">
+    <!-- AniCollection.css library -->
+    <link rel="stylesheet" href="../static/anicollection.css">
 </head>
 ​
 <body>
@@ -25,8 +25,8 @@
         
     
             <div class="title">
-                <h1>Sources</h1>
-            
+                <h1 style="color: #fff;">Sources</h1>
+            </div>
         
             <div class = "links"></div>
                 <li><a href="https://www.ncei.noaa.gov/data/local-climatological-data/doc/LCD_documentation.pdf">NOAA Climate Data</a></li>
@@ -41,6 +41,6 @@
     </div>
 ​
 ​
-<script src="{{url_for('static', filename='anijs-min.js')}}"></script>
+<script src="../static/anijs-min.js"></script>
 </body>
 </html>

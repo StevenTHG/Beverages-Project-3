@@ -131,6 +131,9 @@ background-image: (to right, #fffbd5, #b20a2c);
   font-size: 18px;
   padding: 70px;
 }
+a:visited{
+  color: #ffffff;
+}
 
 
 

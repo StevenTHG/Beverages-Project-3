@@ -15,7 +15,7 @@ body
 
 .main{
   width: 100%;
-  background: url("static/temperature-background.jpg");
+  background: url("../static/temperature-background.jpg");
   background-position: center;
   background-size: cover;
   height: 130vh;
