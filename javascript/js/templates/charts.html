@@ -8,20 +8,31 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='charts.css') }}">
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
+​
 </head>
 <body>
     <div class="background">
         <div class="title">
             <h1>Temperature Data</h1>
         </div>
+        <br />
+        <br />
         <div class="menu">
             <ul data-anijs="if: mouseover, do: bounce animated">
-                <li> <a href="home.html">HOME</a></li>
-                <li> <a href="map.html">MAP</a></li>
-                <li> <a href="charts.html">CHARTS</a></li>
-                <li> <a href="sources.html">SOURCES</a></li>
+                <li> <a href="home">HOME</a></li>
+                <li> <a href="map">MAP</a></li>
+                <li> <a href="charts">CHARTS</a></li>
+                <li> <a href="sources">SOURCES</a></li>
             </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
     <div class ="text1">
         <p>The charts below display the daily average temperature, the average minimum, and the average maximum temperatures for five regional capitol cities in the United States: Sacramento, California; Juneau, Alaska; Honolulu, Hawaii; Topeka, Kansas; and Albany, New York. Dropdowns are provided to select each of the three plots, or all three for comparison purposes.</p>
     </div>
@@ -86,16 +97,6 @@
     <div class="topekatext">
         <p>Like Juneau, Topeka shows more variability than the other cities, but over the course of the decade showed a drop of just over 2 ℉. Similar to Sacramento, there was a precipitous drop in the average temperature in the first year of data. Average temperature dropped in that year from almost 59 ℉ to just over 55 ℉. Minimum average temperature dropped from 47.5 ℉ to 44.2 ℉ over the course of the decade. The trend for the decade overall is one of cooling, but longer time spans will need to be analyzed to see if this is an anomaly or part of a longer-term trend.</p>
     </div>
-
-    <!-- <script src="{{url_for('static', filename='data.js')}}"></script>
-    <script src="{{url_for('static', filename='albanyPlot.js')}}"></script>
-    <script src="{{url_for('static', filename='honoluluPlot.js')}}"></script>
-    <script src="{{url_for('static', filename='juneauPlot.js')}}"></script>
-    <script src="{{url_for('static', filename='sacramentoPlot.js')}}"></script>
-    <script src="{{url_for('static', filename='topekaPlot.js')}}"></script>
-    <script src="{{url_for('static', filename='config.js')}}"></script>
-    <script src="{{url_for('static', filename='data.js')}}"></script>
-    <script src="{{url_for('static', filename='logic.js')}}"></script> -->
     
     <script src="../static/data.js"></script>
     <script src="../static/albanyPlot.js"></script>
@@ -104,8 +105,7 @@
     <script src="../static/sacramentoPlot.js"></script>
     <script src="../static/topekaPlot.js"></script>
     <script src="../static/config.js"></script>
-    <!-- <script src="../static/data.js"></script> -->
-    <!-- <script src="../static/logic.js"></script> -->
-
+​
+​
 </body>
 </html>
